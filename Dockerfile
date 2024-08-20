@@ -83,4 +83,5 @@ COPY --from=builder /app/node_modules /node_modules
 COPY --from=builder /app/dist /dist
 
 # Command to run your script
-CMD ["node", "/dist/main.js"]
+# CMD ["node", "/dist/main.js"]
+CMD ["node", "/dist/cli.js"]
