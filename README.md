@@ -9,5 +9,5 @@ docker build --progress=plain -t image-resizer .
 2. Run the image with the following command
 
 ```
-docker run --rm -v $(pwd)/outfiles:/outfiles image-resizer
+docker run -it --rm -v ./infiles:/infiles -v ./outfiles:/outfiles image-resizer:latest
 ```

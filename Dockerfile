@@ -81,7 +81,8 @@ WORKDIR /
 # Copy the application code
 COPY --from=builder /app/node_modules /node_modules
 COPY --from=builder /app/dist /dist
+COPY --from=builder /app/cli-pre.js /dist
 
 # Command to run your script
 # CMD ["node", "/dist/main.js"]
-CMD ["node", "/dist/cli.js"]
+CMD ["node", "/dist/cli-pre.js"]
